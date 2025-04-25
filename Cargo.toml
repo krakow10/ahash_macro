@@ -2,6 +2,11 @@
 name = "ahash_macro"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/krakow10/ahash_macro"
+license = "MIT OR Apache-2.0"
+description = "A macro which invokes ahash on a string literal."
+authors = ["Rhys Lloyd <krakow20@gmail.com>"]
+keywords = ["hash", "ahash", "const", "macro"]
 
 [lib]
 proc_macro=true
