@@ -3,7 +3,9 @@ use syn::parse_macro_input;
 
 fn make_hash(value:&str)->u64{
 	use std::hash::Hasher;
-	let mut hasher=ahash::AHasher::default();
+	use std::hash::BuildHasher;
+	let not_random_state=ahash::RandomState::with_seeds(0,0,0,0);
+	let mut hasher=not_random_state.build_hasher();
 	hasher.write(value.as_bytes());
 	hasher.finish()
 }
